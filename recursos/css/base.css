@@ -1,0 +1,129 @@
+/* Importar fuente */
+
+/* Uso modelo caja alternativo */
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Gowun Batang";
+    src: url(fonts/GowunBatang-Regular.ttf);
+}
+
+:root {
+    font-family: 'Gowun Batang', sans-serif;
+    font-size: 18px;
+    color: #222;
+    --color-gradiente: linear-gradient(90deg, #ededed, #999);
+}
+
+html,body{
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+/* Encabezado ***************/
+.encabezado {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--color-gradiente);
+    padding: 30px 30px; 
+    height: 60px;
+    /* alto para móvil */
+}
+
+.encabezado a img {
+    width: 150px;
+}
+
+.encabezado nav a {
+    color: #222;
+    /* Eliminar subrayado */
+    text-decoration: none;
+}
+
+/* Contenido ***************/
+.contenido {
+    padding-bottom: 50px;
+    flex-grow: 1;
+}
+
+.contenido__seccion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 30px;   
+}
+
+.contenido__h1 {
+    margin: 0;
+}
+
+.contenido__imagen-principal {
+    /* ver https://developer.mozilla.org/es/docs/Web/CSS/object-fit */
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 50%;
+}
+
+/* Pie ***************/
+.pie {
+    display: flex;
+    justify-content: center;
+    padding: 15px 15px;
+    background: var(--color-gradiente);
+}
+
+.pie .icono {
+    
+    align-items: center;
+    fill: #999;
+}
+
+.pie ul {
+    list-style: none;
+}
+
+/* Whatsapp */
+.ws{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    /* posicionamiento "fixed" right: 20px y bottom: 20px */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ededed;
+    border-radius: 50%;
+    width:50px;
+    height:50px;
+}
+.ws svg{
+    width:40px;
+    height:40px;
+}
+
+/* Media */
+@media (width > 768px) {
+    .encabezado{
+        height: 80px;
+    }
+    .encabezado a img {
+        width: 200px;
+    }
+    .contenido__seccion {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 70px 70px;    
+    }
+}
